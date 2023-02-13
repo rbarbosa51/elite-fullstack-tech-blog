@@ -1,0 +1,17 @@
+body {
+    background-color: lightgreen;
+  }
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  h1 {
+    background-color: green;
+    color: black;
+    width: 200px;
+  }
+  .hero {
+    background-color: black;
+    height: 100px;
+    color: green;
+  }
