@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const apiRoutes = require('./api');
+const apiRoutes = require('./api');
 const home = require('./home.js');
 const login = require('./login.js');
 const signup = require('./signup.js');
@@ -10,6 +10,6 @@ router.use('/login', login);
 router.use('/signup', signup);
 router.use('/dashboard', dashboard);
 
-//router.use('/api', apiRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;

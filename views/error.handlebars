@@ -1,0 +1,8 @@
+<h1>{{error}}</h1>
+<button id="goBackBtn">Go back</button>
+<script>
+    const goBack = document.getElementById('goBackBtn');
+    goBack.addEventListener('click', (e) => {
+        history.back();
+    })
+</script>
