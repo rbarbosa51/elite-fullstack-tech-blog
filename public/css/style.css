@@ -1,17 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background-color: lightgreen;
-  }
-  a {
-    color: green;
-    text-decoration: none;
-  }
-  h1 {
-    background-color: green;
-    color: black;
-    width: 200px;
-  }
-  .hero {
-    background-color: black;
-    height: 100px;
-    color: green;
-  }
+  background-color: rgb(217, 234, 211);
+  height: 100vh;
+}
+.hero {
+  background-color: black;
+  height: 20%;
+}
+.hero a {
+  color: rgb(217, 234, 211);
+  text-decoration: none;
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+}
+nav {
+  margin-bottom: 1rem;
+}
+.heroTitle {
+  background-color: rgb(217, 234, 211);
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0.2rem 2rem;
+  padding: 0 1rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0.5rem 0.4rem 10px rgb(217, 234, 211);
+}
+.post {
+  margin: 2rem 2rem;
+  display: inline-block;
+  width: 80%;
+  border: 1px solid black;
+  height: 25%;
+  overflow: hidden;
+  
+}
+.postTitleBox {
+  background-color: black;
+  height: 20%;
+  /* padding: 0 1rem; */
+}
+.postTitle, .postCreator {
+  display: inline-block;
+  background-color: black;
+  color: rgb(217, 234, 211);
+  padding: 0 1rem;
+  margin: 0.3rem;
+  
+
+}
+.postCreator {
+  float: right;
+}
+.postContent {
+  padding: 1rem 1rem;
+}
+.userControl {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+}
+.userTitle {
+  background-color: black;
+}
+.userTitle {
+  /* display: inline-block; */
+  color: rgb(217, 234, 211);
+  padding: 0 1rem;
+  font-size: 1.6rem;
+}
+.userContent {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+.userContent form {
+  margin: 0rem auto;
+}
+.userContent form input, .userContent form label, .userContent form button {
+  display: block;
+  /* display: inline-block; */
+  width: 100%;
+  margin: 0rem 0 1rem;
+  
+}
+
+.userBreak {
+  margin: 1rem;
+}
+.commentBox {
+  border: 1px solid black;
+  width: 50%;
+  margin: 1rem auto 2rem;
+  
+}
+.commentBlackBox {
+  height: 2rem;
+  background-color: black;
+
+}
+.commentContent {
+  margin: 0.2rem 1rem;
+  font-size: 1.2rem;
+}
+.commentContent button, .commentContent textarea {
+  width: 100%;
+  margin: 0 auto;
+}
+.createNewPost {
+  border: 1px solid black;
+  width: 80%;
+  margin: 1rem auto;
+}
+.createNewPostTitlebox {
+  background-color: black;
+  color: rgb(217, 234, 211);
+  font-size: 1.3rem;
+}
+.createNewPost form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.createNewPost form button, .createNewPost form #newPostTitle {
+  width: 100%;
+}
+
+.editPost {
+  border: 1px solid black;
+  width: 80%;
+  margin: 1rem auto;
+}
+.editTitlebox {
+  background-color: black;
+  color: rgb(217, 234, 211);
+  font-size: 1.3rem;
+}
+.editPost form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.editPost form button, .editPost form #editTitle {
+  width: 100%;
+}
+
+button {
+  background-color: rgb(102, 102, 102);
+  color: rgb(217, 234, 211);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
