@@ -14,7 +14,19 @@ Comment.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false
+        },
         article_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: "post",
+              key: "id",
+              unique: false,
+            },
+          },
+          creator_id: {
             type: DataTypes.INTEGER,
             references: {
               model: "user",

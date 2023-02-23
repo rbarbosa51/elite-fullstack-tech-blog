@@ -10,7 +10,11 @@
     <body>
         <div class="hero">
         <nav>
-            <a href="">Home</a><a href="">Dashboard</a><a href="">{{Login}}</a><a href="">Logout</a>
+            <a href="/">Home</a><a href="/dashboard">Dashboard</a>
+            {{#if loginButton}}
+            <a href="/login">Login</a>
+            {{/if}}
+            <a href="/logoff">Logout</a>
         </nav>
         <header>
             <div class="heroTitle">The Tech Blog Change me</div>

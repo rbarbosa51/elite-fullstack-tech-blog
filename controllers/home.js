@@ -4,7 +4,9 @@ const router = require('express').Router();
 //Uses withAuth middleware to prevent non logged users from access
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage' );
+        res.render('home', {
+            loginButton: true
+        } );
     } catch (err) {
         res.status(500).json(err);
     }

@@ -1,7 +1,7 @@
 const User = require('./User.js');
-const Article = require('./Article.js');
+const Post = require('./Post.js');
 const Comment = require('./Comment.js');
 
 
 
-module.exports = {User, Article, Comment};
+module.exports = {User, Post, Comment};

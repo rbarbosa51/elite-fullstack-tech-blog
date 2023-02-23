@@ -63,7 +63,7 @@ nav {
 .userControl {
   border: 1px solid black;
   width: 50%;
-  margin: 0 auto;
+  margin: 1rem auto ;
 }
 .userTitle {
   background-color: black;
