@@ -1,1 +1,11 @@
 <h1>Dashboard Not implemented</h1>
+<div></div>
+<div style="display:flex">
+    <button id="newPostBtn" style="justify-content:center;width: 10rem; margin: 5rem auto 0">+ New Post</button>
+</div>
+<script>
+    const newPostBtn = document.getElementById('newPostBtn');
+    newPostBtn.addEventListener('click', (e) => {
+        window.location.href = '/createpost';
+    });
+</script>
