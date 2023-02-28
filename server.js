@@ -14,8 +14,10 @@ const hbs = exphbs.create({});
 //const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'Super Secreto Esto es un secreto',
-  cookie: {},
-  resave: false,
+  cookie: {
+    maxAge: 1000 * 60 * 10
+  },
+  resave: true,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
@@ -32,6 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

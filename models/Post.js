@@ -1,4 +1,4 @@
-const {Model, Datatypes, DataTypes} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
 
 class Post extends Model {}
@@ -20,7 +20,7 @@ Post.init(
             allowNull: false
         },
         date: {
-            type: DataTypes.DATEONLY,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         creator_id: {
@@ -39,3 +39,4 @@ Post.init(
         modelName: 'post',
     }
 );
+module.exports = Post;

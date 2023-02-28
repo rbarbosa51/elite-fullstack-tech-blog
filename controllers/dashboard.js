@@ -1,7 +1,7 @@
 const router = require('express').Router()
-const withAuth = require('../utils/auth.js');
+//const withAuth = require('../utils/auth.js');
 
-router.get('/',withAuth, (req,res) => {
+router.get('/', (req,res) => {
     res.render('dashboard', {
         loginButton: false
     })
