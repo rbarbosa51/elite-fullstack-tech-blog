@@ -3,10 +3,6 @@ const { Post, User } = require('../../models');
 
 //title, content, date, creator_id
 router.post('/', async (req,res) => {
-    console.log(req.body);
-    //console.log(req.session.loggedUserID);
-    console.log(req.app.locals.loggedUserID)
-    //newPostTitle      newPostContent
     //Construct Date
     const date = new Date();
     const strDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
@@ -23,7 +19,8 @@ router.post('/', async (req,res) => {
         res.render('error', {error: err});
         return;
     }
-    res.redirect('/home');
+    console.log('This is the line')
+    res.redirect('/');
 })
 
 module.exports = router;

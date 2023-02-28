@@ -1,12 +1,9 @@
 const router = require('express').Router();
-const {User,Post} = require('../models');
+const {Post} = require('../models');
 //const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-    
-    
     try {
-        //const currentUser = await User.findByPk(req.app.locals.loggedUserID);
         const allPosts = await Post.findAll({
             attributes: ['title','content', 'date', 'creator']
         });
@@ -14,7 +11,8 @@ router.get('/', async (req, res) => {
         //loginButton: !req.app.locals.loggedUserID,
         res.render('home', {posts:posts } );
     } catch (err) {
-        res.status(500).json(err);
+        //res.status(500).json(err);
+        res.render('error', {error: err});
     }
 });
 

@@ -33,17 +33,17 @@ nav {
   box-shadow: 0.5rem 0.4rem 10px rgb(217, 234, 211);
 }
 .post {
-  margin: 2rem 2rem;
+  margin: 1rem 2rem 0;
   display: inline-block;
   width: 80%;
   border: 1px solid black;
-  height: 25%;
+  height: 15%;
   overflow: hidden;
   
 }
 .postTitleBox {
   background-color: black;
-  height: 20%;
+  height: 25%;
   /* padding: 0 1rem; */
 }
 .postTitle, .postCreator {
@@ -51,7 +51,7 @@ nav {
   background-color: black;
   color: rgb(217, 234, 211);
   padding: 0 1rem;
-  margin: 0.3rem;
+  /* margin: 0.3rem; */
   
 
 }
