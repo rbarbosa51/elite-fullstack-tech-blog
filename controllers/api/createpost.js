@@ -16,13 +16,14 @@ router.post('/', async (req,res) => {
             title: req.body.newPostTitle,
             content: req.body.newPostContent,
             date: strDate,
-            creator_id: req.app.locals.loggedUserID
+            creator: currentUser.userName,
+            creator_id: currentUser.id
         })
     } catch (err) {
         res.render('error', {error: err});
         return;
     }
-    res.send('Success');
+    res.redirect('/home');
 })
 
 module.exports = router;

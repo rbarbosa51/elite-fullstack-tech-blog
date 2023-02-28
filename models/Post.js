@@ -23,6 +23,10 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
+        creator: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         creator_id: {
             type: DataTypes.INTEGER,
             references: {
