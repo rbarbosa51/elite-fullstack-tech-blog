@@ -30,7 +30,7 @@ router.post('/', async (req,res) => {
         res.render('error',{error:err});
         return;
     }
-    res.render('dashboard');
+    res.redirect('/dashboard');
     return;
 })
 

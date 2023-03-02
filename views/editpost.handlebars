@@ -1,11 +1,12 @@
 <div class="editPost">
     <div class="editTitlebox">Edit Post</div>
-    <form action="">
+    <form method="post">
         <label for="editTitle">Title</label><br>
-        <input type="text" name="editTitle" id="editTitle" value="{}"><br>
+        <input type="text" name="editTitle" id="editTitle" value="{{post.title}}"><br>
         <label for="editContent">Content</label><br>
-        <textarea name="editContent" id="editContent" cols="100" rows="10">{}</textarea><br>
-        <button type="submit">Update Post</button>
-        <button>Delete</button>
+        <textarea name="editContent" id="editContent" cols="100" rows="10">{{post.content}}</textarea><br>
+        <input name="hiddenID" type="hidden" value="{{post.id}}">
+        <button type="submit" formaction="/api/updatepost">Update Post</button>
+        <button tyoe="submit" formaction="/api/deletepost">Delete</button>
     </form>
 </div>

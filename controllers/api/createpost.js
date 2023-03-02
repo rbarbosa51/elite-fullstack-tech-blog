@@ -7,7 +7,7 @@ router.post('/', async (req,res) => {
     const date = new Date();
     const strDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
     try {
-        const currentUser = await User.findByPk(req.app.locals.loggedUserID);
+        const currentUser = await User.findByPk(req.session.loggedUserID);
         await Post.create({
             title: req.body.newPostTitle,
             content: req.body.newPostContent,

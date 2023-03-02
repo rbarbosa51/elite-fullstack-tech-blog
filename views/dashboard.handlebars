@@ -1,5 +1,12 @@
-<h1>Dashboard Not implemented</h1>
-<div></div>
+<h1 style="margin: 1rem 0 1rem; text-align:center;">Modify your post</h1>
+{{#each posts as |post| }}
+<div style="display: flex;height: 3rem;">
+    <a style="text-decoration: none; text-align:center; font-size: 1.6rem; display:block; width: 10rem; margin: 0 auto;" href="/editpost/{{post.id}}">
+    <div style="background-color: rgb(102, 102, 102);">{{post.title}}</div>
+</a>
+</div>
+
+{{/each}}
 <div style="display:flex">
     <button id="newPostBtn" style="justify-content:center;width: 10rem; margin: 5rem auto 0">+ New Post</button>
 </div>

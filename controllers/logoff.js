@@ -3,7 +3,6 @@ const session = require('express-session');
 const router = require('express').Router();
 
 router.get('/', (req,res) => {
-    //req.app.locals.loggedUserID = 0;
     req.session.loggedUserID = 0;
     req.session.logButton = true;
     // req.session.destroy( () => {
@@ -14,7 +13,7 @@ router.get('/', (req,res) => {
     //         console.log('error:\n' + err);
     //     }
         
-        res.redirect('/login');
+    res.redirect('/login');
     //})
     // if (req.session.loggedUserID){
     //     req.session.destroy( () => {
