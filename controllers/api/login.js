@@ -18,11 +18,13 @@ router.post('/', async (req,res) => {
             res.render('error', {error: 'Either wrong username or password'});
             return;
         }
-        await req.session.save( () => {
-            req.session.loggedUserID = loggedUser.id;
-            req.app.locals.loggedUserID = loggedUser.id;
-            req.session.logButton = false;
-        });
+        req.session.loggedUserID = loggedUser.id;
+        req.session.logButton = false;
+        // await req.session.save( () => {
+        //     req.session.loggedUserID = loggedUser.id;
+        //     req.app.locals.loggedUserID = loggedUser.id;
+        //     req.session.logButton = false;
+        // });
         console.log("\nLogged session:" + req.session.loggedUserID + "\n\n");
     } catch (err) {
         res.render('error',{error:err});

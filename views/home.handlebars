@@ -1,5 +1,6 @@
+
 {{#each posts as |post| }}
-<div class="post">
+<div data-id="{{post.id}}" class="post" onclick="getComments()">
     <div class="postTitleBox">
         <div class="postTitle">{{post.title}} </div>
         <div class="postCreator">Posted by {{post.creator}} on {{post.date}}</div>
@@ -9,3 +10,15 @@
     </div>
 </div>
 {{/each}}
+<script>
+    function getComments() {
+        console.log({{post.id}})
+    }
+    const postsBtn = document.getElementsByClassName('post');
+    console.log(postsBtn);
+    postsBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            console.log('Success' + btn.getAttribute('data-id'));
+        })
+    } )
+</script>
