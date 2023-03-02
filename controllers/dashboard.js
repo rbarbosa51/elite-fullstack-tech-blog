@@ -9,7 +9,7 @@ router.get('/', async (req,res) => {
             where: {
                 creator_id: req.session.loggedUserID
             },
-            attributes: ['id', 'title']
+            attributes: ['id', 'title', 'date']
         });
         //console.log(allPosts);
         const posts = allPosts.map(post => post.get({plain: true}));
