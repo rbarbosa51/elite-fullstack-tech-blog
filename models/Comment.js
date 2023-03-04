@@ -8,28 +8,21 @@ Comment.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
         content: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        date: {
-            type: DataTypes.DATEONLY,
-            allowNull: false
+        meta: {
+          type: DataTypes.TEXT,
+          allowNull: false
         },
         article_id: {
             type: DataTypes.INTEGER,
             references: {
               model: "post",
-              key: "id",
-              unique: false,
-            },
-          },
-          creator_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: "user",
               key: "id",
               unique: false,
             },

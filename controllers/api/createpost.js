@@ -19,7 +19,6 @@ router.post('/', async (req,res) => {
         res.render('error', {error: err});
         return;
     }
-    console.log('This is the line')
     res.redirect('/');
 })
 
