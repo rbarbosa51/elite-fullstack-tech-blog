@@ -3,7 +3,6 @@ const {Comment, User} = require('../../models');
 
 router.post('/', async (req,res) => {
     console.log(req.body);
-    let metaComment;
     try {
         const user = await User.findByPk(req.body.userID);
         const date = new Date();

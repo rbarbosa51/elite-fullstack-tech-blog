@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const {Post, Comment} = require('../models');
-router.get('/:id', async (req,res) => {
-    //res.status(200).send(`Success ${req.params.id}`);
+const withAuth = require('../utils/auth.js');
+
+router.get('/:id', withAuth, async (req,res) => {
+    
     try {
         const aPost = await Post.findByPk(req.params.id);
         const post = aPost.get({plain:true});

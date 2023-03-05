@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {Post} = require('../models');
 const withAuth = require('../utils/auth.js');
 
-router.get('/', async (req,res) => {
+router.get('/', withAuth, async (req,res) => {
     //console.log('Here');
     try {
         const allPosts = await Post.findAll({
