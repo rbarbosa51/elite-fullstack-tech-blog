@@ -11,9 +11,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
-//const hbs = exphbs.create({ helpers });
+//cookie set to 5 minutes (debugging, not for real world production)
 const sess = {
   secret: 'Super Secreto Esto es un secreto',
+  cookie: {
+    maxAge: 5 * 60 * 1000,
+  },
   resave: false,
   saveUninitialized: false,
   store: new SequelizeStore({
