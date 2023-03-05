@@ -1,29 +1,35 @@
 <div class="post">
-    <div class="postTitleBox">
-        <div class="postTitle">{{post.title}} </div>
-        <div class="postCreator">Posted by {{post.creator}} on {{post.date}}</div>
-    </div>
-    <div class="postContent">
-        {{post.content}}
-    </div>
+  <div class="postTitleBox">
+    <div class="postTitle">{{post.title}} </div>
+    <div class="postCreator">Posted by {{post.creator}} on {{post.date}}</div>
+  </div>
+  <div class="postContent">
+    {{post.content}}
+  </div>
 </div>
-{{#each comments as |comment| }}
-<div class="commentBox">
+{{#each comments as |comment|}}
+  <div class="commentBox">
     <div class="commentBlackBox"></div>
     <div class="commentContent">
-        {{comment.content}}<br><br><br>{{comment.meta}}
+      {{comment.content}}<br /><br /><br />{{comment.meta}}
     </div>
-</div>
+  </div>
 {{/each}}
 <div class="commentBox">
-    <div class="commentBlackBox"></div>
-    <div class="commentContent">
-        <form action="/api/createcomment" method="post">
-            <label for="comment">Comment</label><br>
-            <textarea name="comment" id="comment" cols="100" rows="10" placeholder="Write your comment"></textarea><br>
-            <input type="hidden" name="postID" value="{{post.id}}">
-            <input type="hidden" name="userID" value="{{post.creator_id}}">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+  <div class="commentBlackBox"></div>
+  <div class="commentContent">
+    <form action="/api/createcomment" method="post">
+      <label for="comment">Comment</label><br />
+      <textarea
+        name="comment"
+        id="comment"
+        cols="100"
+        rows="10"
+        placeholder="Write your comment"
+      ></textarea><br />
+      <input type="hidden" name="postID" value="{{post.id}}" />
+      <input type="hidden" name="userID" value="{{post.creator_id}}" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </div>

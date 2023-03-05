@@ -1,12 +1,12 @@
 <h1 style="text-align:center;">Click on a post to view its comments</h1>
-{{#each posts as |post| }}
-<a class="post" href="/comment/{{post.id}}">
+{{#each posts as |post|}}
+  <a class="post" href="/comment/{{post.id}}">
     <div class="postTitleBox">
-        <div class="postTitle">{{post.title}} </div>
-        <div class="postCreator">Posted by {{post.creator}} on {{post.date}}</div>
+      <div class="postTitle">{{post.title}} </div>
+      <div class="postCreator">Posted by {{post.creator}} on {{post.date}}</div>
     </div>
     <div class="postContent">
-        {{post.content}}
+      {{post.content}}
     </div>
-</a>
+  </a>
 {{/each}}

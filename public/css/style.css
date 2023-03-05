@@ -40,21 +40,19 @@ nav {
   border: 1px solid black;
   height: 15%;
   overflow: hidden;
-  
 }
 .postTitleBox {
   background-color: black;
   height: 25%;
   /* padding: 0 1rem; */
 }
-.postTitle, .postCreator {
+.postTitle,
+.postCreator {
   display: inline-block;
   background-color: black;
   color: rgb(217, 234, 211);
   padding: 0 1rem;
   /* margin: 0.3rem; */
-  
-
 }
 .postCreator {
   float: right;
@@ -65,7 +63,7 @@ nav {
 .userControl {
   border: 1px solid black;
   width: 50%;
-  margin: 1rem auto ;
+  margin: 1rem auto;
 }
 .userTitle {
   background-color: black;
@@ -83,12 +81,13 @@ nav {
 .userContent form {
   margin: 0rem auto;
 }
-.userContent form input, .userContent form label, .userContent form button {
+.userContent form input,
+.userContent form label,
+.userContent form button {
   display: block;
   /* display: inline-block; */
   width: 100%;
   margin: 0rem 0 1rem;
-  
 }
 
 .userBreak {
@@ -98,18 +97,17 @@ nav {
   border: 1px solid black;
   /* width: 50%; */
   margin: 1rem auto 2rem;
-  
 }
 .commentBlackBox {
   height: 2rem;
   background-color: black;
-
 }
 .commentContent {
   margin: 0.2rem 1rem;
   font-size: 1.2rem;
 }
-.commentContent button, .commentContent textarea {
+.commentContent button,
+.commentContent textarea {
   width: 100%;
   margin: 0 auto;
 }
@@ -128,7 +126,8 @@ nav {
   margin: 0 auto;
   font-size: 1.2rem;
 }
-.createNewPost form button, .createNewPost form #newPostTitle {
+.createNewPost form button,
+.createNewPost form #newPostTitle {
   width: 100%;
 }
 
@@ -147,7 +146,8 @@ nav {
   margin: 0 auto;
   font-size: 1.2rem;
 }
-.editPost form button, .editPost form #editTitle {
+.editPost form button,
+.editPost form #editTitle {
   width: 100%;
 }
 

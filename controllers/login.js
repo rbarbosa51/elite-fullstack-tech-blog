@@ -1,10 +1,10 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/', (req,res) => {
-    res.render('login', {
-        loginButton: false
-    });
-})
-
+//render the login handlebar
+router.get("/", (req, res) => {
+  res.render("login", {
+    loginButton: false,
+  });
+});
 
 module.exports = router;
